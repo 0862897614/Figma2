@@ -486,10 +486,16 @@ a {
 
 .install__img {
   position: absolute;
-  bottom: 0;
+  bottom: 22px;
   width: 284px;
-  height: 522px;
+  margin-left: 20px;
   object-fit: cover;
+  transition: ease-in-out 0.7s;
+  transform: rotate(-10deg);
+}
+.install__img:hover {
+  cursor: pointer;
+  transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .install__content {
