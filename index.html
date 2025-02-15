@@ -80,6 +80,7 @@
       content="./assets/favicon/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#ffffff" />
+
     <!-- Embed font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,6 +90,8 @@
     />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Shine smile</title>
   </head>
   <body>
@@ -171,6 +174,7 @@
                 src="./assets/img/Rectangle 19.svg"
                 alt="Our services"
                 class="service__img"
+                data-aos="fade-down-right"
               />
             </figure>
 
@@ -352,7 +356,7 @@
         <div class="container">
           <div class="team-header">
             <h2 class="section-heading">Our virtual dentist</h2>
-            <a href="#!" class="btn team__cta">Meet our dentist</a>
+            <a href="#!" class="btn team__cta" data-aos="flip-right">Meet our dentist</a>
           </div>
 
           <div class="team__list">
@@ -742,5 +746,36 @@
          </div>
       </div>
     </section>
+
+    <!-- js animation -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    // Bạn cũng có thể truyền một đối tượng cài đặt tùy chọn
+    // Dưới đây là các cài đặt mặc định
+    AOS.init({
+      // Cài đặt chung:
+      disable: false, // chấp nhận các giá trị sau: 'phone', 'tablet', 'mobile', boolean, biểu thức hoặc hàm
+      startEvent: 'DOMContentLoaded', // tên sự kiện được gửi trên tài liệu, AOS sẽ khởi tạo khi sự kiện này diễn ra
+      initClassName: 'aos-init', // lớp được áp dụng sau khi khởi tạo
+      animatedClassName: 'aos-animate', // lớp được áp dụng khi có hiệu ứng
+      useClassNames: false, // nếu true, sẽ thêm nội dung của `data-aos` làm lớp khi cuộn
+      disableMutationObserver: false, // vô hiệu hóa việc phát hiện thay đổi tự động (nâng cao)
+      debounceDelay: 50, // độ trễ debounce khi thay đổi kích thước cửa sổ (nâng cao)
+      throttleDelay: 99, // độ trễ throttle khi cuộn trang (nâng cao)
+
+      // Các cài đặt có thể được ghi đè cho từng phần tử bằng thuộc tính `data-aos-*`:
+      offset: 120, // khoảng cách (tính theo px) từ điểm kích hoạt gốc
+      delay: 0, // giá trị từ 0 đến 3000, với bước 50ms
+      duration: 400, // giá trị từ 0 đến 3000, với bước 50ms
+      easing: 'ease', // hiệu ứng easing mặc định cho các animation của AOS
+      once: false, // animation chỉ xảy ra một lần khi cuộn xuống hay không
+      mirror: false, // có cho phép hiệu ứng chạy ngược khi cuộn lên không
+      anchorPlacement: 'top-bottom', // xác định vị trí của phần tử so với cửa sổ để kích hoạt hiệu ứng
+    });
+</script>
+
+  </script>
   </body>
 </html>
